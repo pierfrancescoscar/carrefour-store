@@ -13,10 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Home front
 Route::get('/', function () {
     return view('welcome');
 });
 
+// Authentication routes
 Auth::routes();
 
+// Admin area routes
 Route::get('/home', 'HomeController@index')->name('home');
+
+
