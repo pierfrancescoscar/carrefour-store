@@ -43,7 +43,6 @@ class ProductController extends Controller
         $new_product->save();
 
         return redirect()->route('admin.products.show', $new_product->id);
-
     }
 
     /**
@@ -54,13 +53,13 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-       $product = Product::find($id);
+        $product = Product::find($id);
 
-       if(! $product) {
-           abort(404);
-       }
+        if (!$product) {
+            abort(404);
+        }
 
-       return view('admin.products.show', compact('product'));
+        return view('admin.products.show', compact('product'));
     }
 
     /**
@@ -73,9 +72,9 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
 
-        if(! $product) {
+        if (!$product) {
             abort(404);
-        } 
+        }
 
         return view('admin.products.edit', compact('product'));
     }
@@ -89,7 +88,12 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $product = Product::find($id);
+
+        $product->update($data);
+
+        return redirect()->route('admin.products.show', $product->id);
     }
 
     /**
@@ -100,8 +104,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-      $product = Product::find($id);
-		$product->delete();
-		return redirect()->route('admin.products.index')->with('status', 'Prodotto e stato cancelato!');;
+        $product = Product::find($id);
+        $product->delete();
+        return redirect()->route('admin.products.index')->with('status', 'Prodotto e stato cancelato!');;
     }
 }

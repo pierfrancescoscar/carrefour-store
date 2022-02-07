@@ -1,46 +1,67 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <h1 class="mb-5">Edit {{ $product->title }}</h1>
+<div class="container">
+    <h1 class="mb-5">Update {{ $product->title }}</h1>
 
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
 
-        {{-- submit --}}
-        <form action="{{ route('admin.products.update', $product->id) }}" method="POST">
+    {{-- submit --}}
+    {{-- Form --}}
+    <form action="{{ route('admin.products.update', $product->id) }}" method="POST">
         @csrf
         @method('PATCH')
 
+        {{-- Title --}}
         <div class="mb-3">
-            <label for="title" class="form-label">Title*</label>
-            <input class="form-control" type="text" name="title" id="title" value="{{ old('title', $product->title) }}">
-            @error('title')
-                <div class="text-danger">{{ $message }}</div>
+            <label for="name" class="form-label">Name*</label>
+            <input class="form-control" type="text" name="name" id="name" value="{{ old('name',$product->name) }}">
+            @error('name')
+            <div class="text-danger">{{ $message }}</div>
             @enderror
         </div>
-        
+        {{-- Description --}}
         <div class="mb-3">
-            <label for="content" class="form-label">Content*</label>
-            <textarea class="form-control" type="text" name="content" id="content" rows="6">{{ old('content', $product->content) }}</textarea>
-            @error('content')
-                <div class="text-danger">{{ $message }}</div>
+            <label for="description" class="form-label">Description*</label>
+            <textarea class="form-control" type="text" name="description"
+                id="description">{{ old('name',$product->description) }}</textarea>
+            @error('description')
+            <div class="text-danger">{{ $message }}</div>
             @enderror
-
         </div>
+        {{-- Price --}}
+        <div class="mb-3">
+            <label for="price" class="form-label">Price*</label>
+            <input class="form-control" type="text" name="price" id="price" value="{{ old('price',$product->price) }}">
+            @error('price')
+            <div class="text-danger">{{ $message }}</div>
+            @enderror
+        </div>
+        {{-- Available Or Not --}}
+        <div class="mb-3">
+            <label for="available" class="form-label">Available*</label>
+            <select name="available" id="available">
+                <option value="1" @if (old('available',$product->available)==1) selected @endif>Yes</option>
+                <option value="0" @if (old('available',$product->available)==0) selected @endif>No</option>
+            </select>
+            @error('price')
+            <div class="text-danger">{{ $message }}</div>
+            @enderror
+        </div>
+        {{-- Submit --}}
+        <button class="btn btn-primary" type="submit">Update Product</button>
+</div>
 
-        <button class="btn btn-primary" type="submit">Create Product</button>
-        
-        </form>
+</form>
 
-    </div>
-    
+</div>
+
 @endsection
-
