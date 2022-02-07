@@ -55,7 +55,13 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::find($id);
+
+        if(! $product) {
+            abort(404);
+        } 
+
+        return view('admin.products.edit', compact('product'));
     }
 
     /**
