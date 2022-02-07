@@ -47,8 +47,8 @@
         <div class="mb-3">
             <label for="available" class="form-label">Available*</label>
             <select name="available" id="available">
-                <option value="{{old('available')}}">Yes</option>
-                <option value="{{old('available')}}">No</option>
+                <option value="1" @if (old('available') == 1) selected @endif>Yes</option>
+                <option value="0" @if (old('available') == 0) selected @endif>No</option>
             </select> 
             @error('price')
                 <div class="text-danger">{{ $message }}</div>
