@@ -16,7 +16,7 @@
 
     {{-- submit --}}
     {{-- Form --}}
-    <form action="{{ route('admin.products.update', $product->id) }}" method="POST">
+    <form action="{{ route('admin.products.update', $product->slug) }}" method="POST">
         @csrf
         @method('PATCH')
 
