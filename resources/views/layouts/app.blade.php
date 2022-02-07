@@ -26,11 +26,32 @@
 
 <body>
     <div id="app">
+		 <header>
+			<div class="custom-header">
+				{{-- LOGO  --}}
+				<div class="custom-header__logo">
+					<img src="{{ asset('images/carrefour-logomark.svg') }}" alt="">
+					<img src="{{ asset('images/carrefour-logotype.svg') }}" alt="">
+				</div>
+				{{-- INPUT --}}
+				<div class="custom-header__form">
+					<form action="">
+						<input placeholder="Di cosa hai bisogno?"  class="custom-header__input pl-4" type="text">
+						<button class="search-btn"><i class="fas fa-search"></i></button>
+					</form>
+				</div>
+				<div class="pay-block">
+					<div class="custom-header__payback payback">
+						<h3>payback</h3>
+						<h4>Scopri Payback</h4>
+						<img src="{{ asset('images/payback-ball.png') }}" alt="">
+					</div>
+					<a href=""><i class="fas fa-shopping-cart"></i></a>
+				</div>
+			</div>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="{{ __('Toggle navigation') }}">
@@ -80,7 +101,7 @@
                 </div>
             </div>
         </nav>
-
+		</header>
         <main class="py-4">
             @yield('content')
         </main>
