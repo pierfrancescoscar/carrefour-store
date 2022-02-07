@@ -34,6 +34,12 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required|max:100',
+            'description' => 'required',
+            'price' => 'required',
+        ]);
+
         $data = $request->all();
         $new_product = new Product();
 
@@ -96,6 +102,12 @@ class ProductController extends Controller
      */
     public function update(Request $request, $slug)
     {
+        $request->validate([
+            'name' => 'required|max:100',
+            'description' => 'required',
+            'price' => 'required',
+        ]);
+
         $data = $request->all();
         $product = Product::where('slug', $slug)->first();
 
