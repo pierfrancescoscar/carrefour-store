@@ -1,5 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-sono una homepage della guest
+
+    <div class="content">
+        ballaaaaaaaaaaaaaaaa
+
+
+    </div>
+
+
+
+
+
+
+
 @endsection

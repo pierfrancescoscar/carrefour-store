@@ -22,7 +22,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('admin.products.create');
     }
 
     /**
@@ -33,7 +34,16 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $new_product = new Product();
+
+        $new_product->fill($data);
+
+        $new_product->save();
+
+        return redirect()->route('admin.products.show', $new_product->id);
+
     }
 
     /**
@@ -44,7 +54,13 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+       $product = Product::find($id);
+
+       if(! $product) {
+           abort(404);
+       }
+
+       return view('admin.products.show', compact('product'));
     }
 
     /**
@@ -55,7 +71,13 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::find($id);
+
+        if(! $product) {
+            abort(404);
+        } 
+
+        return view('admin.products.edit', compact('product'));
     }
 
     /**
