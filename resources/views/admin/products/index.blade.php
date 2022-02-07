@@ -7,9 +7,9 @@
 	<div class="row">
 		<div class="col">
 			@if (session('status'))
-				<div class="alert alert-success">
-					{{ session('status') }}
-				</div>
+			<div class="alert alert-success">
+				{{ session('status') }}
+			</div>
 			@endif
 			<table class="table table-bordered">
 				<thead>
@@ -32,13 +32,19 @@
 						<td>{{$product->available}}</td>
 						<td colspan="3">
 							<ul class="d-flex m-0 p-0 list-style-none">
-								<li class="list-unstyled"><a href="{{ route('admin.products.edit', $product->id) }}" class="nav-link ms-1 p-0">Edit</a></li>
-								<li class="ml-2 list-unstyled"><a href="#" class="nav-link ms-1 p-0">Update</a></li>
+								<li class="ml-2 list-unstyled mr-2"><a
+										href="{{route('admin.products.show', $product->id)}}"
+										class="btn btn-primary ms-1 p-1">Show</a></li>
+
+								<li class="list-unstyled"><a href="{{ route('admin.products.edit', $product->id) }}"
+										class="btn btn-success ms-1 p-1">Edit</a></li>
+
 								<li class="ml-2 list-unstyled">
-									<form action="{{route('admin.products.destroy', $product['id'])}}" method="POST">
+									<form action="{{route('admin.products.destroy', $product->id)}}" method="POST">
 										@csrf
 										@method('DELETE')
-										<button type="submit" class="btn btn-danger ms-1 py-1 px-3 text-uppercase"><i class="fas fa-trash-alt"></i></button>
+										<button type="submit" class="btn btn-danger ms-1 py-1 px-3 text-uppercase"><i
+												class="fas fa-trash-alt"></i></button>
 									</form>
 								</li>
 							</ul>
