@@ -34,6 +34,12 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required|max:100',
+            'description' => 'required',
+            'price' => 'required',
+        ]);
+
         $data = $request->all();
         $new_product = new Product();
 
@@ -76,9 +82,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($slug)
     {
-        $product = Product::find($id);
+        $product = Product::where('slug', $slug)->first();
 
         if (!$product) {
             abort(404);
@@ -94,14 +100,20 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $slug)
     {
+        $request->validate([
+            'name' => 'required|max:100',
+            'description' => 'required',
+            'price' => 'required',
+        ]);
+
         $data = $request->all();
-        $product = Product::find($id);
+        $product = Product::where('slug', $slug)->first();
 
         $product->update($data);
 
-        return redirect()->route('admin.products.show', $product->id);
+        return redirect()->route('admin.products.show', $product->slug);
     }
 
     /**
