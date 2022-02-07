@@ -32,9 +32,9 @@
 						<td>{{$product->available}}</td>
 						<td colspan="3">
 							<ul class="d-flex m-0 p-0 list-style-none">
-								<li class=""><a href="#" class="nav-link ms-1 p-0">Edit</a></li>
-								<li class="ml-2"><a href="#" class="nav-link ms-1 p-0">Update</a></li>
-								<li class="ml-2">
+								<li class="list-unstyled"><a href="#" class="nav-link ms-1 p-0">Edit</a></li>
+								<li class="ml-2 list-unstyled"><a href="#" class="nav-link ms-1 p-0">Update</a></li>
+								<li class="ml-2 list-unstyled">
 									<form action="{{route('admin.products.destroy', $product['id'])}}" method="POST">
 										@csrf
 										@method('DELETE')
