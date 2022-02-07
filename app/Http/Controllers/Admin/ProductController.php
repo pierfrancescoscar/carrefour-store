@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ProductController extends Controller
 {
@@ -22,7 +23,6 @@ class ProductController extends Controller
      */
     public function create()
     {
-
         return view('admin.products.create');
     }
 
@@ -35,14 +35,22 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-
         $new_product = new Product();
 
-        $new_product->fill($data);
+        $slug = Str::slug($data['name'], '-');
+        $slug_base = $slug;
+        $count = 1;
 
+        while (Product::where('slug', $slug)->first()) {
+            $slug = $slug_base . '-' . $count;
+            $count++;
+        }
+
+        $data['slug'] = $slug;
+        $new_product->fill($data);
         $new_product->save();
 
-        return redirect()->route('admin.products.show', $new_product->id);
+        return redirect()->route('admin.products.show', $new_product->slug);
     }
 
     /**
@@ -51,9 +59,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        $product = Product::find($id);
+        $product = Product::where('slug', $slug)->first();
 
         if (!$product) {
             abort(404);

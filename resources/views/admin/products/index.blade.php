@@ -33,10 +33,10 @@
 						<td colspan="3">
 							<ul class="d-flex m-0 p-0 list-style-none">
 								<li class="ml-2 list-unstyled mr-2"><a
-										href="{{route('admin.products.show', $product->id)}}"
+										href="{{route('admin.products.show', $product->slug)}}"
 										class="btn btn-primary ms-1 p-1">Show</a></li>
 
-								<li class="list-unstyled"><a href="{{ route('admin.products.edit', $product->id) }}"
+								<li class="list-unstyled"><a href="{{ route('admin.products.edit', $product->slug) }}"
 										class="btn btn-success ms-1 p-1">Edit</a></li>
 
 								<li class="ml-2 list-unstyled">
