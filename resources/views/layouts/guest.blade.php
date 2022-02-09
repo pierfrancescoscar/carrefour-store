@@ -25,12 +25,18 @@
 
 
 <body>
-    {{-- Header --}}
+	<div class="wrapper">
+	{{-- Header --}}
     @include('components.navbar')
 
     {{-- Main Content --}}
-    @yield('content')
-
-
+	 <div class="main">
+		 @yield('content')
+	 </div>
+	
+	 {{-- FOOTER  --}}
+    @include('components.footer')
+	
+	</div>
 </body>
 </html>

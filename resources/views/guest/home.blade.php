@@ -4,17 +4,17 @@
 
 
 <section class="container">
-    <div class="row">
+    <div class="products">
         @foreach ($products as $product)
-        <div class="col-2">
-            <div class="card h-100">
-                <img style="width: 100%; height: 200px; object-fit: cover;" src="{{ $product->thumb }}" class="card-img-top" alt="{{ $product->name }}">
-                <div class="card-body">
-                  <h5 class="card-title">{{ $product->name }}</h5>
-                  <p class="card-text">{{ $product->description }}</p>
-                  <a href="{{ route('products.show', $product->slug) }}" class="btn btn-primary">Read more</a>
+        <div class="products__item">
+					<div class="products__img-wrapper">
+						<img src="{{ $product->thumb }}" class="" alt="{{ $product->name }}">
+					</div>
+                <div class="products__info">
+                  <h5 class="">{{ $product->name }}</h5>
+                  <p class="">{{ $product->description }}</p>
+                  <a href="{{ route('products.show', $product->slug) }}" class="btn btn-primary"><i class="fas fa-eye"></i></a>
                 </div>
-              </div>
         </div>
         @endforeach
     </div>
