@@ -1,0 +1,32 @@
+.social{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	background-color: #1b3d79;
+	padding-right: 20px;
+	color: #fff;
+	h4{
+		
+		margin-right: 10px;
+	}
+	i{
+		background-color: #fff;
+		color: #1b3d79;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 5px;
+		width: 30px;
+		height: 30px;
+		border-radius: 4px;
+	}
+}
+.made{
+	display: flex;
+	justify-content: center;
+	background-color: #f7f7f7;
+	padding: 5px 0;
+	h5{
+		color: 979cb6;
+	}
+}
