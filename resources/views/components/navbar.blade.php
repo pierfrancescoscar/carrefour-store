@@ -5,12 +5,12 @@
         <img src="{{ asset('images/carrefour-logotype.svg') }}" alt="">
     </div>
     {{-- INPUT --}}
-    <div class="custom-header__form">
-        <form action="">
+	 <form action="">
+			<div class="custom-header__form">
             <input placeholder="Di cosa hai bisogno?" class="custom-header__input pl-4" type="text">
             <button class="search-btn"><i class="fas fa-search"></i></button>
+			</div>
         </form>
-    </div>
     <div class="pay-block">
         <div class="custom-header__payback payback">
             <h3>payback</h3>

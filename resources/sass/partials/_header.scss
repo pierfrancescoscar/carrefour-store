@@ -2,17 +2,20 @@
 	display: flex;
 	padding: 20px 0;
 	align-items: center;
+	
 	justify-content: space-around;
+
 
 	&__form {
 		position: relative;
+		
 		.search-btn{
 			position: absolute;
 			right: 10px;
 			bottom: 50%;
 			width: 30px;
 			height: 30px;
-			transform: translatey(50%);
+			transform: translateY(50%);
 			border-radius: 100%;
 			color: #f7f7f7;
 			background-color: #84b7f2;
@@ -27,7 +30,6 @@
 		border-radius: 40px;
 		border: none;
 		background-color: #f7f7f7;
-
 		
 	}
 
