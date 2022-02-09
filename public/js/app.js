@@ -49931,8 +49931,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\yurim\OneDrive\Робочий стіл\LARAVEL TEAM 1\carrefour-store\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\yurim\OneDrive\Робочий стіл\LARAVEL TEAM 1\carrefour-store\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! E:\xampp\htdocs\laravel\carrefour-store\carrefour-store-2\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! E:\xampp\htdocs\laravel\carrefour-store\carrefour-store-2\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
