@@ -15,6 +15,10 @@ Route::middleware('auth')->namespace('Admin')->name('admin.')->prefix('admin')->
     Route::resource('/products', 'ProductController');
 });
 
+// Product Detail Route
+Route::resource('/products', 'ProductController');
+
+// Any route
 Route::get('{any?}', function () {
     return view('guest.home');
 })->where('any', '.*');
