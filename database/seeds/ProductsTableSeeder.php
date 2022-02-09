@@ -20,6 +20,7 @@ class ProductsTableSeeder extends Seeder
 
             $new_product->name = $product['name'];
             $new_product->price = $product['price'];
+            $new_product->slug = $product['slug'];
             $new_product->description = $product['description'];
             $new_product->available = $product['available'];
 
