@@ -30,7 +30,10 @@
 
     {{-- Main Content --}}
     @yield('content')
-
+	
+	 {{-- FOOTER  --}}
+    @include('components.footer')
+	
 
 </body>
 </html>
