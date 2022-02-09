@@ -1,5 +1,5 @@
-@extends('layouts.app')
-@include('components.navbar')
+@extends('layouts.guest')
+
 @section('content')
 
 
