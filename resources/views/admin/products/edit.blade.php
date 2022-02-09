@@ -45,6 +45,14 @@
             <div class="text-danger">{{ $message }}</div>
             @enderror
         </div>
+        {{-- Thumb --}}
+        <div class="mb-3">
+            <label for="thumb" class="form-label">Thumb*</label>
+            <input class="form-control" type="text" name="thumb" id="thumb" value="{{ old('thumb',  $product->thumb )}}">
+            @error('thumb')
+            <div class="text-danger">{{ $message }}</div>
+            @enderror
+        </div>
         {{-- Available Or Not --}}
         <div class="mb-3">
             <label for="available" class="form-label">Available*</label>

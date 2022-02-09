@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use App\Product;
 
 class HomeController extends Controller
 {
@@ -21,7 +23,23 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
+
     {
-        return view('guest.home');
+        $products = Product::all();
+                
+        return view('guest.home', compact('products'));
     }
+
+    public function show($slug)
+    {
+        $product = Product::where('slug', $slug)->first();
+
+        if (!$product) {
+            abort(404);
+        }
+
+        return view('guest.products.show', compact('product'));
+    }
+
+
 }
