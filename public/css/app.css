@@ -1,4 +1,6 @@
-ul, li, ol {
+ul,
+li,
+ol {
   list-style: none;
 }
 
@@ -158,7 +160,8 @@ ul, li, ol {
   padding: 7px 20px;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -170,4 +173,66 @@ html, body {
 
 .main {
   flex: 1 1 auto;
+}
+
+.min-w-50 {
+  min-width: 50%;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-basis-50 {
+  flex-basis: 50%;
+}
+
+.img-container {
+  width: 360px;
+  height: 360px;
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  border: 2px solid #0970e6;
+}
+
+.img-container img {
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  padding: 2rem;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.text-20 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.text-14 {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.btn-icon {
+  width: 32px;
+  height: 32px;
+  border: none;
+  outline: none;
+  display: flex;
+  flex-shrink: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  background-color: transparent;
+}
+.btn-icon:hover svg {
+  color: #0970e6;
 }

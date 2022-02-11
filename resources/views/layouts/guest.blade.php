@@ -25,18 +25,20 @@
 
 
 <body>
-	<div class="wrapper">
-	{{-- Header --}}
-    @include('components.navbar')
+    <div class="wrapper">
+        {{-- Header --}}
+        @include('components.navbar')
 
-    {{-- Main Content --}}
-	 <div class="main">
-		 @yield('content')
-	 </div>
-	
-	 {{-- FOOTER  --}}
-    @include('components.footer')
-	
-	</div>
+        {{-- Main Content --}}
+        <div class="main">
+            @yield('content')
+        </div>
+
+        {{-- FOOTER --}}
+        @include('components.footer')
+
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
 </body>
+
 </html>
