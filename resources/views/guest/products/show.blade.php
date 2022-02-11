@@ -2,26 +2,10 @@
 @section('content')
 
 <section>
-    {{--
-    <div class="row">
-        <div class="col-6">
-            <h3>{{$product->name}}</h3>
-            @if($product->available == 1)
-            <span class="d-block"><strong>Available:</strong> Yes</span>
-            @else
-            <span class="d-block"><strong>Available:</strong> No</span>
-            @endif
-        </div>
-        <div class="col-6">
-            <p>{{ $product->description }}</p>
-            <img src="{{ $product->thumb }}" alt="{{ $product->name }}" />
-        </div>
-    </div>
-    --}}
-    <div class="d-flex justify-content-center">
-        <div class="d-flex justify-content-center py-5">
+    <div class="d-flex justify-content-center bg-lightgray">
+        <div class="d-flex justify-content-center mt-5 py-5">
             <div class="d-flex flex-basis-50">
-                <div class="img-container">
+                <div class="img-container bg-white">
                     <img src="{{ $product->thumb }}" alt="{{ $product->name }}">
                 </div>
             </div>
@@ -34,7 +18,7 @@
                     </div>
                 </div>
                 <div class="d-flex align-items-end justify-content-between mt-5">
-                    <div class="d-flex flex-column  mt-3">
+                    <div class="d-flex flex-column mt-3">
                         <div class="d-flex text-14 my-2">
                             @if($product->available == 1)
                             <span class="d-flex text-14 text-green">Disponibile</span>

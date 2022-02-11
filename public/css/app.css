@@ -280,3 +280,7 @@ body {
 .text-red {
   color: #dc3545;
 }
+
+.bg-lightgray {
+  background-color: #f7f7f7;
+}
