@@ -60,9 +60,22 @@ body {
     line-height: 1.5rem;
 }
 
+.text-16 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
 .text-14 {
     font-size: 0.875rem;
     line-height: 1.5rem;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.fw-bolder {
+    font-weight: 500;
 }
 
 .btn-icon {
@@ -81,4 +94,37 @@ body {
     &:hover svg {
         color: #0970e6;
     }
+}
+
+.btn-shop {
+    border: none;
+    outline: none;
+    display: flex;
+    flex-shrink: 0;
+    font-size: 1rem;
+    color: #ffffff;
+    cursor: pointer;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999999px;
+    justify-content: center;
+    transition: all 0.1s ease;
+    background-color: #0970e6;
+
+    > span svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    &:hover {
+        background-color: #004f9f;
+    }
+}
+
+.text-green {
+    color: #198754;
+}
+
+.text-red {
+    color: #dc3545;
 }
