@@ -2,11 +2,13 @@
 	display: flex;
 	padding: 20px 0;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
 
 
 	&__form {
 		position: relative;
+		display: flex;
+		align-items: center;
 		
 		.search-btn{
 			position: absolute;
@@ -29,6 +31,7 @@
 		border-radius: 40px;
 		border: none;
 		background-color: #f7f7f7;
+		padding: 0;
 		
 	}
 
@@ -80,4 +83,32 @@ width: 600px;
 	display: flex;
 	align-items: center;
 }
+
+.navbar {
+	font-size: 18px;
+	color: #2d4d7c;
+	padding: 0 ;
+	
+	&__list {
+			display: flex;
+			align-items: center;
+			padding: 0;
+			li{
+				transition: linear;
+				cursor: pointer;
+				margin-right: 22px;
+				
+				&:last-child{
+					margin: 0;
+				}
+				&:hover{
+					color: #1579ea;
+				}
+			}
+		}
+}
+
+
+
+
 

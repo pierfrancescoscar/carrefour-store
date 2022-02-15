@@ -8,10 +8,12 @@ ol {
   display: flex;
   padding: 20px 0;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .custom-header__form {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .custom-header__form .search-btn {
   position: absolute;
@@ -32,6 +34,7 @@ ol {
   border-radius: 40px;
   border: none;
   background-color: #f7f7f7;
+  padding: 0;
 }
 .custom-header__payback {
   background-color: white;
@@ -80,6 +83,28 @@ ol {
 .pay-block {
   display: flex;
   align-items: center;
+}
+
+.navbar {
+  font-size: 18px;
+  color: #2d4d7c;
+  padding: 0;
+}
+.navbar__list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+.navbar__list li {
+  transition: linear;
+  cursor: pointer;
+  margin-right: 22px;
+}
+.navbar__list li:last-child {
+  margin: 0;
+}
+.navbar__list li:hover {
+  color: #1579ea;
 }
 
 .social {
@@ -173,6 +198,12 @@ body {
 
 .main {
   flex: 1 1 auto;
+}
+
+.container {
+  max-width: 1800px;
+  padding: 15px;
+  margin: 0 auto;
 }
 
 .min-w-50 {
