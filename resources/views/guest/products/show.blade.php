@@ -14,6 +14,11 @@
                     <button class="btn-icon"><i data-feather="heart"></i></button>
                     <div class="d-block mt-4">
                         <h3 class="text-20 fw-bold">{{ $product->name }}</h3>
+                        @if ($product->category)
+                        <div class="badge bg-primary text-white">{{ $product->category->name }}</div>
+                        @else
+                        <div class="badge bg-primary text-white">Uncategorized</div>
+                        @endif
                         <p class="text-14 fw-bolder">{{ $product->description }}</p>
                     </div>
                 </div>
