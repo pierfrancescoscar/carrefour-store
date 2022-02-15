@@ -49797,6 +49797,20 @@ var app = new Vue({
   el: "#app"
 });
 feather.replace();
+/**
+ * Swiper JS initialization
+ */
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 12,
+  centeredSlides: false,
+  spaceBetween: 1,
+  grabCursor: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  }
+});
 
 /***/ }),
 
@@ -49932,8 +49946,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\xampp\htdocs\laravel\carrefour-store\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! E:\xampp\htdocs\laravel\carrefour-store\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\luiru\Desktop\carrefour-store\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\luiru\Desktop\carrefour-store\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

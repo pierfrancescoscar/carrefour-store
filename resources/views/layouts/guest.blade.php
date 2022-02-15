@@ -12,7 +12,9 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -21,6 +23,9 @@
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 </head>
 
 
@@ -28,6 +33,8 @@
     <div class="wrapper">
         {{-- Header --}}
         @include('components.navbar')
+
+        @include('components.swiperCarousel')
 
         {{-- Main Content --}}
         <div class="main">
@@ -40,5 +47,8 @@
     </div>
     <script src="https://unpkg.com/feather-icons"></script>
 </body>
+
+<!-- Swiper script -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
 </html>

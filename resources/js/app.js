@@ -35,3 +35,18 @@ const app = new Vue({
 });
 
 feather.replace();
+
+/**
+ * Swiper JS initialization
+ */
+
+ const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 12,
+    centeredSlides: false,
+    spaceBetween: 1,
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+});
