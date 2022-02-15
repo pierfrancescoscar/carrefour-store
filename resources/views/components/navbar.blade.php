@@ -1,8 +1,12 @@
 <div class="custom-header">
     {{-- LOGO --}}
     <div class="custom-header__logo">
-        <img src="{{ asset('images/carrefour-logomark.svg') }}" alt="">
-        <img src="{{ asset('images/carrefour-logotype.svg') }}" alt="">
+        <a href="/">
+            <img src="{{ asset('images/carrefour-logomark.svg') }}" alt="">
+        </a>
+        <a href="/">
+            <img src="{{ asset('images/carrefour-logotype.svg') }}" alt="">
+        </a>
     </div>
     {{-- INPUT --}}
 	 <form action="">
