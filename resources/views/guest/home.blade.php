@@ -3,6 +3,11 @@
 @section('content')
 
 
+<section>
+  
+</section>
+
+
 <section class="container">
     <div class="products">
         @foreach ($products as $product)

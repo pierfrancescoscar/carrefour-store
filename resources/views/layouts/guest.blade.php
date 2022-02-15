@@ -29,6 +29,11 @@
         {{-- Header --}}
         @include('components.navbar')
 
+        {{-- Jumbo --}}
+        @include('guest.jumbo')
+
+        
+
         {{-- Main Content --}}
         <div class="main">
             @yield('content')

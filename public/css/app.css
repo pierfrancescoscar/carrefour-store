@@ -160,9 +160,40 @@ ol {
   padding: 7px 20px;
 }
 
+.home_page_banner {
+  overflow: hidden;
+}
+.home_page_banner a img {
+  width: 100%;
+  display: block;
+  height: 170px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin-top: 30px;
+}
+
+.carusel {
+  padding: 2rem 6rem;
+}
+.carusel li {
+  padding: 0px;
+}
+.carusel li .img_container {
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.carusel img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 .wrapper {
