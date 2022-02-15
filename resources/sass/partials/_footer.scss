@@ -3,7 +3,7 @@
 	align-items: center;
 	justify-content: flex-end;
 	background-color: #1b3d79;
-	padding-right: 20px;
+	padding: 10px 20px 10px 0;
 	color: #fff;
 	h4{
 		
@@ -28,5 +28,140 @@
 	padding: 5px 0;
 	h5{
 		color: 979cb6;
+	}
+}
+
+.pay {
+	display: flex;
+	padding: 5px 0 0 0;
+	margin-top: 5px;
+	flex-direction: column;
+	align-items: center;
+	border-top: 2px solid #ececec ;
+	
+	&__title {
+		font-size: 18px;
+		color: #1b3d79;
+		font-weight: 400;
+	}
+	&__icon {
+		padding: 10px 0;
+		width: 100%;
+		text-align: center;
+	}
+	img{
+		margin:0 13px;
+	}
+
+		&__visa {
+			max-width: 50px;
+		}
+
+		&__mc {
+			max-width: 37px;
+		}
+
+		&__express {
+			max-width: 26px;
+		}
+
+		&__pp {
+			max-width: 57px;
+		}
+}
+
+.footer-wrppaer {
+	padding: 40px 0 0 0;
+
+	.container{
+		display: flex;
+		justify-content: space-between;
+
+	}
+}
+.footer-links {
+	display: flex;
+
+
+}
+.footer-column {
+	margin-right: 50px;
+	&:last-child{
+		margin: 0;
+	}
+	li a{
+		color: #575757;
+	}
+	li h4{
+		font-size: 18px;
+		color: #1b3d79;
+	}
+	ul{
+		padding: 0;
+	}
+}
+
+
+.footer-customer-care {
+	&__call-us {
+		display: flex;
+		align-items: center;
+		border: 3px solid #d3e3f5;
+		max-width: 330px;
+		border-radius: 10px;
+
+		.logo{
+			background-color: #d3e3f5;;
+		}
+		.contact{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 0 25px;
+			h5{
+				font-size: 20px;
+				line-height: 24px;
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+			div{
+				color: #a19e9d;
+			}
+			.cell{
+				font-size: 18px;
+				font-weight: 700;
+				color: #0970e6;
+			}
+		}
+	}
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 10px 0 0 0;
+	}
+	&__item {
+		text-align: center;
+		border: 2px solid red;
+		flex-grow: 1;
+		padding: 5px 10px;
+		margin-right: 10px;
+		border: 3px solid #d3e3f5;
+		border-radius: 10px;
+
+		&:last-child{
+			margin: 0;
+		}
+		div{
+			text-transform: uppercase;
+		}
+		h6{
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+		img{
+			height: 54px;
+
+		}
 	}
 }
