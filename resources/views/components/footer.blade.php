@@ -1,13 +1,38 @@
 <footer>
 
+	<div class="services">
+		<div class="services-main">
+
+		</div>
+		<ul class="services-list">
+			<li class="services-list__item">
+				<img src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dwa3e49b4c/financialservices.svg" alt="">
+				CARTA CARREFOUR FINDOMESTIC
+			</li>
+			<li class="services-list__item">
+				<img src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dw40efc902/ic_GiftCard_small_1.svg" alt="">
+				GIFT CARD CARREFOUR
+			</li>
+			<li class="services-list__item">
+				<img src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dwf20ee960/salute.svg" alt="">
+				CARREFOUR SALUTE
+			</li>
+			<li class="services-list__item">
+				<img src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dw77b055e6/distributore.svg" alt="">
+				CARREFOUR CARBURANTI
+			</li>
+			
+		</ul>
+	</div>
+
 	<div class="social">
 		<h4>#restaconnesso</h4>
-	 <i class="fab fa-facebook-f"></i>
-	 <i class="fab fa-twitter"></i>
-	 <i class="fab fa-instagram"></i>
-	 <i class="fab fa-youtube"></i>
-	 <i class="fab fa-linkedin-in"></i>
-	 </div>
+		<i class="fab fa-facebook-f"></i>
+		<i class="fab fa-twitter"></i>
+		<i class="fab fa-instagram"></i>
+		<i class="fab fa-youtube"></i>
+		<i class="fab fa-linkedin-in"></i>
+	</div>
 
 	 <div class="footer-wrppaer">
 		 <div class="container">
@@ -129,7 +154,7 @@
 		 </div>
 	 </div>
 
-	 <div class="pay">
+	<div class="pay">
 		<div class="pay__title">Metodi di pagamento</div>
 		<ul class="pay__icon">
 			<img class="pay__visa" src="../images/visa.svg" alt="">

@@ -262,6 +262,25 @@ ol {
   height: 54px;
 }
 
+.services-list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  padding: 25px 0;
+  background: #d3e3f5;
+}
+.services-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+.services-list__item img {
+  width: 30px;
+  margin: 0 15px 0 0;
+}
+
 .products {
   margin-left: 10px;
   margin-right: 10px;
