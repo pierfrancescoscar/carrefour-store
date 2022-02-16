@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
 use App\Http\Controllers\Controller;
 use App\Product;
 use Illuminate\Http\Request;
@@ -13,7 +14,8 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
-        return view('admin.products.index', compact('products'));
+        $categories = Category::all();
+        return view('admin.products.index', compact('products', 'categories'));
     }
 
     /**
@@ -23,7 +25,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create');
+        $categories = Category::all();
+        return view('admin.products.create', compact('categories'));
     }
 
     /**
@@ -38,6 +41,8 @@ class ProductController extends Controller
             'name' => 'required|max:100',
             'description' => 'required',
             'price' => 'required',
+            'thumb' => 'nullable',
+            'category_id' => 'required|exists:categories,id',
         ]);
 
         $data = $request->all();
@@ -68,12 +73,12 @@ class ProductController extends Controller
     public function show($slug)
     {
         $product = Product::where('slug', $slug)->first();
-
+        $categories = Category::all();
         if (!$product) {
             abort(404);
         }
 
-        return view('admin.products.show', compact('product'));
+        return view('admin.products.show', compact('product', 'categories'));
     }
 
     /**
@@ -106,6 +111,8 @@ class ProductController extends Controller
             'name' => 'required|max:100',
             'description' => 'required',
             'price' => 'required',
+            'thumb' => 'nullable',
+            'category_id' => 'required',
         ]);
 
         $data = $request->all();

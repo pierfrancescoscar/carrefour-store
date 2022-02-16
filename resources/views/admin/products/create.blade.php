@@ -44,6 +44,19 @@
             <div class="text-danger">{{ $message }}</div>
             @enderror
         </div>
+        {{-- Category --}}
+        <div class="mb-3">
+            <label for="category_id" class="form-label">Price*</label>
+            <select class="form-control" name="category_id" id="category_id">
+                <option value="">Uncategorized</option>
+                @foreach ($categories as $category)
+                    <option value="{{$category->id}}">{{$category->name}}</option>
+                @endforeach
+            </select>
+            @error('category_id')
+            <div class="text-danger">{{ $message }}</div>
+            @enderror
+        </div>
         {{-- Thumb --}}
         <div class="mb-3">
             <label for="thumb" class="form-label">Thumb*</label>
@@ -59,7 +72,7 @@
                 <option value="1" @if (old('available')==1) selected @endif>Yes</option>
                 <option value="0" @if (old('available')==0) selected @endif>No</option>
             </select>
-            @error('price')
+            @error('available')
             <div class="text-danger">{{ $message }}</div>
             @enderror
         </div>

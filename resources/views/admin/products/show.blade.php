@@ -16,6 +16,13 @@
             </div>
             <div class="col-6">
                 <p>{{ $product->description }}</p> 
+                <div>
+                    @if ($product->category_id)
+                    <div class="d-block text-black"><strong>Category: </strong>{{$product->category->name}}</div>
+                    @else
+                    <div class="d-block text-black"><strong>Category: </strong>Uncategorized</div>
+                    @endif
+                </div>
             </div>
         </div>
     </section>

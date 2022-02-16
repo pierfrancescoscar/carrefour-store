@@ -13,5 +13,11 @@ class Product extends Model
         'thumb',
         'price',
         'available',
+        'category_id'
     ];
+
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
 }

@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
-use App\Product;
 
-class ProductController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +15,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return 'ciao';
+        $category = Category::all();
+
+        return 'ritorno una categoria';
     }
 
     /**
@@ -47,15 +47,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($id)
     {
-        $product = Product::where('slug', $slug)->first();
-
-        if (!$product) {
-            abort(404);
-        }
-
-        return view('guest.products.show', compact('product'));
+        //
     }
 
     /**
