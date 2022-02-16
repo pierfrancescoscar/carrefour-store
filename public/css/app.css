@@ -8,10 +8,12 @@ ol {
   display: flex;
   padding: 20px 0;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .custom-header__form {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .custom-header__form .search-btn {
   position: absolute;
@@ -32,6 +34,7 @@ ol {
   border-radius: 40px;
   border: none;
   background-color: #f7f7f7;
+  padding: 0;
 }
 .custom-header__payback {
   background-color: white;
@@ -82,12 +85,34 @@ ol {
   align-items: center;
 }
 
+.navbar {
+  font-size: 18px;
+  color: #2d4d7c;
+  padding: 0;
+}
+.navbar__list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+.navbar__list li {
+  transition: linear;
+  cursor: pointer;
+  margin-right: 22px;
+}
+.navbar__list li:last-child {
+  margin: 0;
+}
+.navbar__list li:hover {
+  color: #1579ea;
+}
+
 .social {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   background-color: #1b3d79;
-  padding-right: 20px;
+  padding: 10px 20px 10px 0;
   color: #fff;
 }
 .social h4 {
@@ -113,6 +138,128 @@ ol {
 }
 .made h5 {
   color: 979cb6;
+}
+
+.pay {
+  display: flex;
+  padding: 5px 0 0 0;
+  margin-top: 5px;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid #ececec;
+}
+.pay__title {
+  font-size: 18px;
+  color: #1b3d79;
+  font-weight: 400;
+}
+.pay__icon {
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+}
+.pay img {
+  margin: 0 13px;
+}
+.pay__visa {
+  max-width: 50px;
+}
+.pay__mc {
+  max-width: 37px;
+}
+.pay__express {
+  max-width: 26px;
+}
+.pay__pp {
+  max-width: 57px;
+}
+
+.footer-wrppaer {
+  padding: 40px 0 0 0;
+}
+.footer-wrppaer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-links {
+  display: flex;
+}
+
+.footer-column {
+  margin-right: 50px;
+}
+.footer-column:last-child {
+  margin: 0;
+}
+.footer-column li a {
+  color: #575757;
+}
+.footer-column li h4 {
+  font-size: 18px;
+  color: #1b3d79;
+}
+.footer-column ul {
+  padding: 0;
+}
+
+.footer-customer-care__call-us {
+  display: flex;
+  align-items: center;
+  border: 3px solid #d3e3f5;
+  max-width: 330px;
+  border-radius: 10px;
+}
+.footer-customer-care__call-us .logo {
+  background-color: #d3e3f5;
+}
+.footer-customer-care__call-us .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 25px;
+}
+.footer-customer-care__call-us .contact h5 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.footer-customer-care__call-us .contact div {
+  color: #a19e9d;
+}
+.footer-customer-care__call-us .contact .cell {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0970e6;
+}
+.footer-customer-care__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 0 0;
+}
+.footer-customer-care__item {
+  text-align: center;
+  border: 2px solid red;
+  flex-grow: 1;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border: 3px solid #d3e3f5;
+  border-radius: 10px;
+}
+.footer-customer-care__item:last-child {
+  margin: 0;
+}
+.footer-customer-care__item div {
+  text-transform: uppercase;
+}
+.footer-customer-care__item h6 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.footer-customer-care__item img {
+  height: 54px;
 }
 
 .products {
@@ -173,6 +320,12 @@ body {
 
 .main {
   flex: 1 1 auto;
+}
+
+.container {
+  max-width: 1800px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .min-w-50 {
