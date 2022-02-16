@@ -1,13 +1,89 @@
 <footer>
 
+<div class="services">
+	<div class="container">
+		<h3 class="services-main-title">Carrefour per te - I nostri servizi</h3>
+		<div class="services-main mb-5">
+				<div class="services-main__app">
+					<div class="services-main__img">
+						<img src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dwf2f68bf3/app.png" alt="">
+					</div>
+					<div class="services-main__contant">
+						<div class="services-main__text">
+							Dal 4 al 18 febbraio scarica la app Carrefour e prova a vincere la tua spesa!
+							
+						</div>
+						<div class="services-main__buttons">
+							<a href="">
+								<img src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dwdf1e7a20/images/istituzionale/icon/GooglePlay_pulsante.png" alt="">
+							</a>
+							<a href="">
+								<img src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dwa28d5fe1/images/istituzionale/icon/AppleStore_pulsante.png" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="services-main__list">
+					<a class="services-main__item" href="">
+						<img class="services-main__logo" src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dw48cbac27/carrefour_now.svg" alt="">
+						<div class="services-main__text">
+							<h6>Carefur NOW</h6>
+							<p> Il nuovo servizio di consegna veloce</p>
+						</div>
+					</a>
+					<a class="services-main__item" href="">
+						<img class="services-main__logo" src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dw9a8aa761/franchising.svg" alt="">
+						<div class="services-main__text">
+							<h6>Over 60</h6>
+							<p>Consegna gratuita per spesa online di almeno 15€</p>
+						</div>
+					</a>
+
+					<a class="services-main__item" href="">
+						<img class="services-main__logo" src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dw27e3d668/donne_in_gravidanza.svg" alt="">
+						<div class="services-main__text">
+							<h6>Donne in gravidanza e neogenitori</h6>
+							<p>Consegna gratuita per spesa online di almeno 15€</p>
+						</div>
+					</a>
+					<a class="services-main__item" href="">
+						<img class="services-main__logo" src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dw22720637/over_60.svg" alt="">
+						<div class="services-main__text">
+							<h6>Franchising Carrefour</h6>
+							<p>Apri un negozio insieme a noi</p>
+						</div>
+					</a>	
+				</div>
+		</div>
+</div>
+		<ul class="services-list">
+			<li class="services-list__item">
+				<img src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dwa3e49b4c/financialservices.svg" alt="">
+				CARTA CARREFOUR FINDOMESTIC
+			</li>
+			<li class="services-list__item">
+				<img src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dw40efc902/ic_GiftCard_small_1.svg" alt="">
+				GIFT CARD CARREFOUR
+			</li>
+			<li class="services-list__item">
+				<img src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dwf20ee960/salute.svg" alt="">
+				CARREFOUR SALUTE
+			</li>
+			<li class="services-list__item">
+				<img src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dw77b055e6/distributore.svg" alt="">
+				CARREFOUR CARBURANTI
+			</li>
+			
+		</ul>
+	</div>
 	<div class="social">
 		<h4>#restaconnesso</h4>
-	 <i class="fab fa-facebook-f"></i>
-	 <i class="fab fa-twitter"></i>
-	 <i class="fab fa-instagram"></i>
-	 <i class="fab fa-youtube"></i>
-	 <i class="fab fa-linkedin-in"></i>
-	 </div>
+		<i class="fab fa-facebook-f"></i>
+		<i class="fab fa-twitter"></i>
+		<i class="fab fa-instagram"></i>
+		<i class="fab fa-youtube"></i>
+		<i class="fab fa-linkedin-in"></i>
+	</div>
 
 	 <div class="footer-wrppaer">
 		 <div class="container">
@@ -129,7 +205,7 @@
 		 </div>
 	 </div>
 
-	 <div class="pay">
+	<div class="pay">
 		<div class="pay__title">Metodi di pagamento</div>
 		<ul class="pay__icon">
 			<img class="pay__visa" src="../images/visa.svg" alt="">
