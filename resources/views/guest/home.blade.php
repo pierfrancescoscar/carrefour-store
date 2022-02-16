@@ -2,6 +2,7 @@
 
 @section('content')
 @include('components.slider', $categories)
+@include('components.jumbo')
 
 <section class="container">
     <div class="products">
