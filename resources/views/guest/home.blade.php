@@ -1,7 +1,7 @@
 @extends('layouts.guest')
 
 @section('content')
-
+@include('components.slider', $categories)
 
 <section class="container">
     <div class="products">

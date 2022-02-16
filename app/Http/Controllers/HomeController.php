@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Product;
@@ -26,8 +27,8 @@ class HomeController extends Controller
 
     {
         $products = Product::all();
-                
-        return view('guest.home', compact('products'));
+        $categories = Category::all();
+        return view('guest.home', compact('products', 'categories'));
     }
 
     public function show($slug)
@@ -41,5 +42,9 @@ class HomeController extends Controller
         return view('guest.products.show', compact('product'));
     }
 
-
+    public function getData()
+    {
+        $product = Product::where('category_id')->get();
+        return $product;
+    }
 }
