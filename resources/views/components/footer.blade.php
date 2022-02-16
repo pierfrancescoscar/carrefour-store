@@ -1,9 +1,61 @@
 <footer>
 
-	<div class="services">
-		<div class="services-main">
+<div class="services">
+	<div class="container">
+		<h3 class="services-main-title">Carrefour per te - I nostri servizi</h3>
+		<div class="services-main mb-5">
+				<div class="services-main__app">
+					<div class="services-main__img">
+						<img src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dwf2f68bf3/app.png" alt="">
+					</div>
+					<div class="services-main__contant">
+						<div class="services-main__text">
+							Dal 4 al 18 febbraio scarica la app Carrefour e prova a vincere la tua spesa!
+							
+						</div>
+						<div class="services-main__buttons">
+							<a href="">
+								<img src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dwdf1e7a20/images/istituzionale/icon/GooglePlay_pulsante.png" alt="">
+							</a>
+							<a href="">
+								<img src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dwa28d5fe1/images/istituzionale/icon/AppleStore_pulsante.png" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="services-main__list">
+					<a class="services-main__item" href="">
+						<img class="services-main__logo" src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dw48cbac27/carrefour_now.svg" alt="">
+						<div class="services-main__text">
+							<h6>Carefur NOW</h6>
+							<p> Il nuovo servizio di consegna veloce</p>
+						</div>
+					</a>
+					<a class="services-main__item" href="">
+						<img class="services-main__logo" src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dw9a8aa761/franchising.svg" alt="">
+						<div class="services-main__text">
+							<h6>Over 60</h6>
+							<p>Consegna gratuita per spesa online di almeno 15€</p>
+						</div>
+					</a>
 
+					<a class="services-main__item" href="">
+						<img class="services-main__logo" src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dw27e3d668/donne_in_gravidanza.svg" alt="">
+						<div class="services-main__text">
+							<h6>Donne in gravidanza e neogenitori</h6>
+							<p>Consegna gratuita per spesa online di almeno 15€</p>
+						</div>
+					</a>
+					<a class="services-main__item" href="">
+						<img class="services-main__logo" src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dw22720637/over_60.svg" alt="">
+						<div class="services-main__text">
+							<h6>Franchising Carrefour</h6>
+							<p>Apri un negozio insieme a noi</p>
+						</div>
+					</a>	
+				</div>
 		</div>
+</div>
 		<ul class="services-list">
 			<li class="services-list__item">
 				<img src="https://www.carrefour.it/on/demandware.static/-/Library-Sites-carrefour-library-IT/default/dwa3e49b4c/financialservices.svg" alt="">
@@ -24,7 +76,6 @@
 			
 		</ul>
 	</div>
-
 	<div class="social">
 		<h4>#restaconnesso</h4>
 		<i class="fab fa-facebook-f"></i>
