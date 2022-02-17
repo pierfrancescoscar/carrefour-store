@@ -111,6 +111,22 @@ var swiper = new Swiper(".swiper", {
     releaseOnEdges: false
   }
 });
+var carousel = new Swiper(".carousel", {
+  loop: true,
+  observer: true,
+  observeParents: true,
+  slidesPerView: "auto",
+  direction: "horizontal",
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false
+  }
+});
 
 /***/ }),
 
@@ -121,7 +137,7 @@ var swiper = new Swiper(".swiper", {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\lnann\OneDrive\Desktop\carrefour-store\resources\js\swiper.js */"./resources/js/swiper.js");
+module.exports = __webpack_require__(/*! E:\xampp\htdocs\laravel\carrefour-store\carrefour-store-2\resources\js\swiper.js */"./resources/js/swiper.js");
 
 
 /***/ })
