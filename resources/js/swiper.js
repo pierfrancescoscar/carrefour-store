@@ -18,3 +18,22 @@ const swiper = new Swiper(".swiper", {
       releaseOnEdges: false,
     },
   });
+
+const carousel = new Swiper(".carousel", {
+    loop: true,
+    observer: true,
+    observeParents: true,
+    slidesPerView: "auto",
+    direction: "horizontal",
+
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
